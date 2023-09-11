@@ -18,16 +18,17 @@ const fetchPrice = async(ctype) =>{
 
 
 const showPrice = (coinData)=>{
+    const symbol = coinData.symbol;
     const price = coinData.price;
     const vol = coinData.volume;
     const change = coinData.priceChange1d;
-    const coin = coinData.name;
+    const coin = coinData.name; 
     const curr = 'INR';
     var col= "green";
     if(change<0){
         col = "red";
     }
-    res.innerHTML = `<tr class="bg-primary" style="color: white;">
+    res.innerHTML = `<tr class="bg-subtle" style="color: #176B87;">
     <td>
         Property
     </td>
@@ -36,15 +37,15 @@ const showPrice = (coinData)=>{
     </td>
 </tr>
 <tr>
-    <td>${coin}</td>
+    <td style="color: #176B87;"> Symbol </td>
+    <td><span style="font-size: 1.3em;">${symbol}</span> </td>
+</tr>
+<tr>
+    <td style="color: #176B87;">${coin}</td>
     <td style="color:${col};"><span style="font-size: 1.3em;">${price}</span> ${curr}</td>
 </tr>
 <tr>
-    <td>Volume (24hrs)</td>
+    <td style="color: #176B87;">Volume (24hrs)</td>
     <td>${vol}</td>
-</tr>
-<tr>
-    <td>Change (24hrs)</td>
-    <td style="color:${col};">${change} ${curr}</td>
 </tr>`;
 };
