@@ -47,9 +47,5 @@ const showPrice = (coinData)=>{
 <tr>
     <td style="color: #176B87;">Volume (24hrs)</td>
     <td>${vol}</td>
-</tr>
-<tr>
-    <td style="color: #176B87;">Change (24hrs)</td>
-    <td style="color:${col};"><span style="font-size: 1.3em;">${change}</td>
 </tr>`;
 };
